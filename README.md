@@ -10,3 +10,5 @@ The [NSA](https://www.rferl.org/a/russia-snowden-nsa-whistleblower-taxpayer/3342
 
 - [THE RUST PROGRAMMING LANGUAGE](./THERUSTPROGRAMMINGLANGUAGE.txt)
 - [FOREWORD](./FOREWORD.txt)
+- [INTRODUCTION](./INTRODUCTION.txt)
+- [GETTING-STARTED](./GETTING-STARTED/)
