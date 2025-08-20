@@ -1,0 +1,14 @@
+my thoughts on the foreword section:
+
+i don't feel empowered by staring at a glowing piece of plastic
+
+it is true i have to be cautious while programming in c/c++
+
+are you sure they are friendly? i've read that rust has a steep learning curve
+
+already knew what parallelism/concurrency meant in high school but didn't know the words for them
+
+i've owned a rasberry pi before but i don't know how to build a business out of rasberry pi s
+
+i am not a member of the rust community until i finish the book
+
