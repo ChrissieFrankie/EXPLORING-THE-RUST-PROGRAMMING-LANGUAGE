@@ -1,10 +1,27 @@
-use std::io::{self, Read};                                                  // standard input/output library
+use std::io::{self, BufRead};
 
 fn main() {
-    let mut code = String::new();                                           // create mutable string
-    io::stdin().read_to_string(&mut code).expect("Failed to read input");   // read input from stdin until EOF
+    let stdin = io::stdin();
+    let mut code = String::new();
 
-    let escaped = code.replace("\\", "\\\\").replace("\"", "\\\"");         // safely include comments
+    println!("Paste your code, then type a single line with only END and press Enter:");
 
-    println!("\n\nprintln!(\"{}\",);", escaped);                            // print println! that will print the original statement(s)
+    for line in stdin.lock().lines() {
+        let line = line.expect("Failed to read line");
+        if line.trim() == "END" {
+            break;
+        }
+        code.push_str(&line);
+        code.push('\n');
+    }
+
+    let escaped = code
+        .replace('\\', "\\\\")
+        .replace('\"', "\\\"")
+        .replace('{', "{{")
+        .replace('}', "}}")
+        .replace('\t', "\\t")
+        .replace('\n', "\\n");
+
+    println!("println!(\"{}\")", escaped);
 }
